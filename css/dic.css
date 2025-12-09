@@ -1,0 +1,447 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Cabeçalho */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .back-btn {
+            background-color: transparent;
+            border: 1px solid #444;
+            color: #aaa;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .back-btn:hover {
+            background-color: #333;
+            color: #ddd;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #f0f0f0;
+        }
+        
+        .header h1 i {
+            color: #7e57c2;
+            margin-right: 10px;
+        }
+        
+        .subject-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .subject-icon-large {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(126, 87, 194, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #7e57c2;
+        }
+        
+        .subject-details {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .subject-teacher {
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+        
+        /* Conteúdo principal */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Quadro de Conteúdos */
+        .content-board, .notices-board, .exams-board {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .board-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .board-header h2 {
+            font-size: 22px;
+            font-weight: 300;
+            color: #f0f0f0;
+        }
+        
+        .board-header h2 i {
+            margin-right: 10px;
+            color: #42a5f5;
+        }
+        
+        .add-btn {
+            background-color: #333;
+            color: #f0f0f0;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .add-btn:hover {
+            background-color: #444;
+        }
+        
+        .board-content {
+            padding: 25px;
+        }
+        
+        /* Tabs de Conteúdo */
+        .content-tabs {
+            display: flex;
+            border-bottom: 1px solid #333;
+            margin-bottom: 25px;
+        }
+        
+        .tab-btn {
+            padding: 12px 20px;
+            background-color: transparent;
+            border: none;
+            color: #aaa;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .tab-btn.active {
+            color: #7e57c2;
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #7e57c2;
+        }
+        
+        .tab-btn:hover:not(.active) {
+            color: #ddd;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Lista de Conteúdos */
+        .content-list {
+            list-style: none;
+        }
+        
+        .content-item {
+            padding: 20px;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .content-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: #444;
+        }
+        
+        .content-info {
+            flex: 1;
+        }
+        
+        .content-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        .content-description {
+            color: #bbb;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .content-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #777;
+        }
+        
+        .content-meta i {
+            margin-right: 5px;
+        }
+        
+        .content-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #2a2a2a;
+            border: 1px solid #333;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .action-btn:hover {
+            background-color: #333;
+            color: #ddd;
+        }
+        
+        .action-btn.download {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4caf50;
+        }
+        
+        .action-btn.play {
+            background-color: rgba(239, 83, 80, 0.1);
+            color: #ef5350;
+        }
+        
+        /* Avisos da Matéria */
+        .notice-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        
+        .notice-item:last-child {
+            border-bottom: none;
+        }
+        
+        .notice-title {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        
+        .notice-text {
+            color: #bbb;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .notice-date {
+            font-size: 13px;
+            color: #777;
+        }
+        
+        /* Quadro de Provas */
+        .exams-list {
+            list-style: none;
+        }
+        
+        .exam-item {
+            padding: 20px;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+        
+        .exam-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: #444;
+        }
+        
+        .exam-item.upcoming {
+            border-left: 4px solid #ffa726;
+        }
+        
+        .exam-item.completed {
+            border-left: 4px solid #4caf50;
+        }
+        
+        .exam-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .exam-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+        }
+        
+        .exam-date {
+            font-size: 14px;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .exam-date i {
+            color: #ffa726;
+        }
+        
+        .exam-description {
+            color: #bbb;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .exam-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .exam-status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .status-upcoming {
+            background-color: rgba(255, 167, 38, 0.2);
+            color: #ffa726;
+        }
+        
+        .status-completed {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        
+        .exam-link {
+            color: #7e57c2;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .exam-link:hover {
+            color: #9575cd;
+            text-decoration: underline;
+        }
+        
+        /* Rodapé */
+        .footer {
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: #ddd;
+        }
+        
+        /* Sem Conteúdo */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+        }
+        
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        .empty-state p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }

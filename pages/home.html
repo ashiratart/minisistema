@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar - Página Inicial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1><i class="fas fa-graduation-cap"></i> Sistema Escolar</h1>
+            <div class="user-info">
+                <div class="user-avatar">JS</div>
+                <div class="user-name">João Silva</div>
+                <button class="logout-btn">Sair <i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </header>
+        
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Quadro de Avisos -->
+            <section class="announcement-board">
+                <div class="board-header">
+                    <h2><i class="fas fa-bullhorn"></i> Avisos Importantes</h2>
+                    <div class="date">Quinta, 15 de Junho</div>
+                </div>
+                <div class="board-content">
+                    <ul class="announcements-list">
+                        <li class="announcement-item">
+                            <div class="announcement-title">Reunião de Pais e Mestres</div>
+                            <p class="announcement-text">A reunião de pais e mestres será realizada na próxima sexta-feira, às 19h, no auditório principal.</p>
+                            <div class="announcement-meta">
+                                <div><i class="far fa-calendar"></i> 18/06/2023</div>
+                                <div class="announcement-priority priority-high">Alta Prioridade</div>
+                            </div>
+                        </li>
+                        <li class="announcement-item">
+                            <div class="announcement-title">Entrega de Trabalhos</div>
+                            <p class="announcement-text">Lembramos que a data limite para entrega dos trabalhos de Ciências é dia 20/06. Não haverá prorrogação.</p>
+                            <div class="announcement-meta">
+                                <div><i class="far fa-calendar"></i> 20/06/2023</div>
+                                <div class="announcement-priority priority-medium">Média Prioridade</div>
+                            </div>
+                        </li>
+                        <li class="announcement-item">
+                            <div class="announcement-title">Biblioteca Renovada</div>
+                            <p class="announcement-text">A biblioteca escolar foi renovada e já está disponível para uso. Novos livros foram adquiridos.</p>
+                            <div class="announcement-meta">
+                                <div><i class="far fa-calendar"></i> 10/06/2023</div>
+                                <div class="announcement-priority priority-low">Baixa Prioridade</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="add-btn" style="margin-top: 20px;">
+                        <i class="fas fa-plus"></i> Novo Aviso
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Matérias Estudadas -->
+            <section class="subjects-board">
+                <div class="board-header">
+                    <h2><i class="fas fa-book-open"></i> Matérias em Andamento</h2>
+                    <div class="date">2º Trimestre</div>
+                </div>
+                <div class="board-content">
+                    <div class="subjects-grid">
+                        <div class="subject-card math">
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-title">Matemática</div>
+                                    <div class="subject-teacher">Prof. Carlos Almeida</div>
+                                </div>
+                                <div class="subject-icon">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                            </div>
+                            <div class="subject-schedule">
+                                <i class="far fa-clock"></i> Segunda e Quarta, 10h-12h
+                            </div>
+                            <div class="subject-progress">
+                                <div class="progress-label">
+                                    <span>Progresso</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-card science">
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-title">Ciências</div>
+                                    <div class="subject-teacher">Prof. Ana Santos</div>
+                                </div>
+                                <div class="subject-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                            </div>
+                            <div class="subject-schedule">
+                                <i class="far fa-clock"></i> Terça e Quinta, 8h-10h
+                            </div>
+                            <div class="subject-progress">
+                                <div class="progress-label">
+                                    <span>Progresso</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-card history">
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-title">História</div>
+                                    <div class="subject-teacher">Prof. Roberto Lima</div>
+                                </div>
+                                <div class="subject-icon">
+                                    <i class="fas fa-landmark"></i>
+                                </div>
+                            </div>
+                            <div class="subject-schedule">
+                                <i class="far fa-clock"></i> Quarta e Sexta, 14h-16h
+                            </div>
+                            <div class="subject-progress">
+                                <div class="progress-label">
+                                    <span>Progresso</span>
+                                    <span>45%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="subject-card language">
+                            <div class="subject-header">
+                                <div>
+                                    <div class="subject-title">Língua Portuguesa</div>
+                                    <div class="subject-teacher">Prof. Maria Fernandes</div>
+                                </div>
+                                <div class="subject-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                            </div>
+                            <div class="subject-schedule">
+                                <i class="far fa-clock"></i> Segunda e Quinta, 13h-15h
+                            </div>
+                            <div class="subject-progress">
+                                <div class="progress-label">
+                                    <span>Progresso</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-btn" style="margin-top: 20px;">
+                        <i class="fas fa-plus"></i> Adicionar Matéria
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>Sistema Escolar &copy; 2023 - <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+            <p style="margin-top: 5px;"><i class="fas fa-envelope"></i> contato@sistemaescolar.edu | <i class="fas fa-phone"></i> (11) 3456-7890</p>
+        </footer>
+    </div>
+
+    <script src="/js/home.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática - Sistema Escolar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="/css/dic.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <div class="header-left">
+                <button class="back-btn" onclick="window.history.back()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h1><i class="fas fa-book"></i> Disciplina</h1>
+            </div>
+            
+            <div class="subject-info">
+                <div class="subject-icon-large">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <div class="subject-details">
+                    <h2>Matemática</h2>
+                    <div class="subject-teacher">Prof. Carlos Almeida</div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Coluna Esquerda: Conteúdos e Avisos -->
+            <div class="left-column">
+                <!-- Quadro de Conteúdos -->
+                <section class="content-board">
+                    <div class="board-header">
+                        <h2><i class="fas fa-folder-open"></i> Conteúdos da Disciplina</h2>
+                        <button class="add-btn">
+                            <i class="fas fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                    <div class="board-content">
+                        <!-- Tabs de conteúdo -->
+                        <div class="content-tabs">
+                            <button class="tab-btn active" data-tab="pdf">PDFs</button>
+                            <button class="tab-btn" data-tab="images">Imagens</button>
+                            <button class="tab-btn" data-tab="videos">Vídeos</button>
+                        </div>
+                        
+                        <!-- Conteúdo PDF -->
+                        <div class="tab-content active" id="pdf-content">
+                            <ul class="content-list">
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Introdução à Álgebra Linear</div>
+                                        <div class="content-description">Conceitos fundamentais de álgebra linear, vetores, matrizes e transformações lineares.</div>
+                                        <div class="content-meta">
+                                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                                            <span><i class="far fa-clock"></i> 15 páginas</span>
+                                            <span><i class="far fa-calendar"></i> 10/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn" title="Visualizar">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                                
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Exercícios de Geometria Analítica</div>
+                                        <div class="content-description">Lista de exercícios resolvidos sobre pontos, retas e planos no espaço.</div>
+                                        <div class="content-meta">
+                                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                                            <span><i class="far fa-clock"></i> 8 páginas</span>
+                                            <span><i class="far fa-calendar"></i> 05/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn" title="Visualizar">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                                
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Teoria dos Conjuntos</div>
+                                        <div class="content-description">Material complementar sobre conjuntos numéricos, operações e propriedades.</div>
+                                        <div class="content-meta">
+                                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                                            <span><i class="far fa-clock"></i> 12 páginas</span>
+                                            <span><i class="far fa-calendar"></i> 01/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn" title="Visualizar">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Conteúdo Imagens -->
+                        <div class="tab-content" id="images-content">
+                            <ul class="content-list">
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Gráficos de Funções</div>
+                                        <div class="content-description">Imagens com gráficos de funções lineares, quadráticas e exponenciais.</div>
+                                        <div class="content-meta">
+                                            <span><i class="far fa-image"></i> Imagem</span>
+                                            <span><i class="fas fa-layer-group"></i> 5 imagens</span>
+                                            <span><i class="far fa-calendar"></i> 08/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn" title="Visualizar">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                                
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Diagramas Matemáticos</div>
+                                        <div class="content-description">Diagramas de Venn, fluxogramas e representações geométricas.</div>
+                                        <div class="content-meta">
+                                            <span><i class="far fa-image"></i> Imagem</span>
+                                            <span><i class="fas fa-layer-group"></i> 3 imagens</span>
+                                            <span><i class="far fa-calendar"></i> 03/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                        <button class="action-btn" title="Visualizar">
+                                            <i class="far fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Conteúdo Vídeos -->
+                        <div class="tab-content" id="videos-content">
+                            <ul class="content-list">
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Resolução de Equações Quadráticas</div>
+                                        <div class="content-description">Vídeo aula sobre métodos de resolução de equações do segundo grau.</div>
+                                        <div class="content-meta">
+                                            <span><i class="fas fa-video"></i> Vídeo</span>
+                                            <span><i class="far fa-clock"></i> 25 min</span>
+                                            <span><i class="far fa-calendar"></i> 12/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn play" title="Assistir">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                                
+                                <li class="content-item">
+                                    <div class="content-info">
+                                        <div class="content-title">Introdução às Derivadas</div>
+                                        <div class="content-description">Conceito de derivada, interpretação geométrica e exemplos.</div>
+                                        <div class="content-meta">
+                                            <span><i class="fas fa-video"></i> Vídeo</span>
+                                            <span><i class="far fa-clock"></i> 32 min</span>
+                                            <span><i class="far fa-calendar"></i> 05/06/2023</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-actions">
+                                        <button class="action-btn play" title="Assistir">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="action-btn download" title="Download">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Avisos da Matéria -->
+                <section class="notices-board">
+                    <div class="board-header">
+                        <h2><i class="fas fa-bullhorn"></i> Avisos da Matéria</h2>
+                        <button class="add-btn">
+                            <i class="fas fa-plus"></i> Novo Aviso
+                        </button>
+                    </div>
+                    <div class="board-content">
+                        <div class="notice-item">
+                            <div class="notice-title">Exercícios para entrega</div>
+                            <p class="notice-text">Lembrando que os exercícios da lista 3 devem ser entregues até sexta-feira, 23/06, via plataforma.</p>
+                            <div class="notice-date"><i class="far fa-calendar"></i> 15/06/2023</div>
+                        </div>
+                        
+                        <div class="notice-item">
+                            <div class="notice-title">Plantão de dúvidas</div>
+                            <p class="notice-text">Nesta quinta-feira, 16/06, haverá plantão de dúvidas das 14h às 16h na sala 305.</p>
+                            <div class="notice-date"><i class="far fa-calendar"></i> 14/06/2023</div>
+                        </div>
+                        
+                        <div class="notice-item">
+                            <div class="notice-title">Material complementar</div>
+                            <p class="notice-text">Novo material sobre funções trigonométricas foi disponibilizado na seção de PDFs.</p>
+                            <div class="notice-date"><i class="far fa-calendar"></i> 10/06/2023</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Coluna Direita: Provas -->
+            <div class="right-column">
+                <!-- Quadro de Provas -->
+                <section class="exams-board">
+                    <div class="board-header">
+                        <h2><i class="fas fa-clipboard-list"></i> Datas de Provas</h2>
+                        <button class="add-btn">
+                            <i class="fas fa-plus"></i> Nova Prova
+                        </button>
+                    </div>
+                    <div class="board-content">
+                        <ul class="exams-list">
+                            <li class="exam-item upcoming">
+                                <div class="exam-header">
+                                    <div class="exam-title">Prova 2 - Álgebra Linear</div>
+                                    <div class="exam-date">
+                                        <i class="far fa-calendar-alt"></i> 28/06/2023
+                                    </div>
+                                </div>
+                                <div class="exam-description">
+                                    Conteúdo: Vetores, matrizes, sistemas lineares e determinantes. A prova terá 10 questões e duração de 2 horas.
+                                </div>
+                                <div class="exam-actions">
+                                    <div class="exam-status status-upcoming">Próxima</div>
+                                    <a href="#" class="exam-link">
+                                        Detalhes <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            
+                            <li class="exam-item upcoming">
+                                <div class="exam-header">
+                                    <div class="exam-title">Trabalho - Geometria Analítica</div>
+                                    <div class="exam-date">
+                                        <i class="far fa-calendar-alt"></i> 05/07/2023
+                                    </div>
+                                </div>
+                                <div class="exam-description">
+                                    Trabalho em grupo sobre aplicações de geometria analítica. Entrega via plataforma.
+                                </div>
+                                <div class="exam-actions">
+                                    <div class="exam-status status-upcoming">Próxima</div>
+                                    <a href="#" class="exam-link">
+                                        Detalhes <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            
+                            <li class="exam-item completed">
+                                <div class="exam-header">
+                                    <div class="exam-title">Prova 1 - Cálculo I</div>
+                                    <div class="exam-date">
+                                        <i class="far fa-calendar-alt"></i> 10/06/2023
+                                    </div>
+                                </div>
+                                <div class="exam-description">
+                                    Limites, continuidade e derivadas. Notas já disponíveis no sistema.
+                                </div>
+                                <div class="exam-actions">
+                                    <div class="exam-status status-completed">Concluída</div>
+                                    <a href="#" class="exam-link">
+                                        Ver Nota <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            
+                            <li class="exam-item completed">
+                                <div class="exam-header">
+                                    <div class="exam-title">Avaliação Bimestral</div>
+                                    <div class="exam-date">
+                                        <i class="far fa-calendar-alt"></i> 25/05/2023
+                                    </div>
+                                </div>
+                                <div class="exam-description">
+                                    Avaliação do primeiro bimestre com todo o conteúdo visto até o momento.
+                                </div>
+                                <div class="exam-actions">
+                                    <div class="exam-status status-completed">Concluída</div>
+                                    <a href="#" class="exam-link">
+                                        Ver Nota <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- Informações da Disciplina -->
+                <section class="content-board">
+                    <div class="board-header">
+                        <h2><i class="fas fa-info-circle"></i> Informações</h2>
+                    </div>
+                    <div class="board-content">
+                        <div class="notice-item">
+                            <div class="notice-title">Horário das Aulas</div>
+                            <p class="notice-text">Segundas e Quartas, 10h-12h<br>Sala 204</p>
+                        </div>
+                        
+                        <div class="notice-item">
+                            <div class="notice-title">Contato do Professor</div>
+                            <p class="notice-text">carlos.almeida@escola.edu<br>Atendimento: Segundas, 14h-16h</p>
+                        </div>
+                        
+                        <div class="notice-item">
+                            <div class="notice-title">Material Necessário</div>
+                            <p class="notice-text">Calculadora científica<br>Caderno quadriculado<br>Régua e compasso</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>Sistema Escolar &copy; 2023 - Página da Disciplina: Matemática</p>
+            <p style="margin-top: 5px;"><a href="index.html">Voltar para a página inicial</a></p>
+        </footer>
+    </div>
+
+    <script src="/js/dic.js">
+    </script>
+</body>
+</html>
