@@ -112,27 +112,6 @@ CREATE TABLE notas (
     INDEX idx_aluno (aluno_id)
 );
 
--- 出席テーブル
-CREATE TABLE frequencias (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    disciplina_id INT NOT NULL,
-    aluno_id INT NOT NULL,
-    data_aula DATE NOT NULL,
-    presente BOOLEAN DEFAULT TRUE,
-    justificativa TEXT,
-    
-    -- 外部キー
-    FOREIGN KEY (disciplina_id) REFERENCES disciplinas(id),
-    FOREIGN KEY (aluno_id) REFERENCES usuarios(id),
-    
-    -- 制約
-    UNIQUE KEY uk_disciplina_aluno_data (disciplina_id, aluno_id, data_aula),
-    
-    -- インデックス
-    INDEX idx_aluno_disciplina (aluno_id, disciplina_id),
-    INDEX idx_data (data_aula)
-);
-
 -- ログ/監査テーブル（オプションだが推奨）
 CREATE TABLE logs_acesso (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -156,4 +135,21 @@ CREATE TABLE recuperacao_senha (
     
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
     INDEX idx_token (token)
+);
+
+CREATE TABLE avisos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    conteudo TEXT NOT NULL,
+    autor_id INT NOT NULL,
+    disciplina_id INT,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    data_expiracao DATETIME,
+    ativo BOOLEAN DEFAULT TRUE,
+    
+    FOREIGN KEY (autor_id) REFERENCES usuarios(id),
+    FOREIGN KEY (disciplina_id) REFERENCES disciplinas(id) ON DELETE CASCADE,
+    
+    INDEX idx_disciplina (disciplina_id),
+    INDEX idx_data_criacao (data_criacao)
 );
